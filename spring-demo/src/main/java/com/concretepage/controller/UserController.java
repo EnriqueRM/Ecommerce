@@ -16,6 +16,14 @@ public class UserController {
 		model.addAttribute("user", service.getDataByUserName(authentication.getName()));
  		return "user-info";
  	}
+	
+	@RequestMapping(value="/privada")
+	public String privada(ModelMap model, Authentication authentication) {
+		authentication.getPrincipal();
+		model.addAttribute("user", service.getDataByUserName(authentication.getName()));
+ 		return "zona-privada";
+ 	}
+	
 	@RequestMapping(value="/error")
 	public String error() {
  		return "access-denied";
