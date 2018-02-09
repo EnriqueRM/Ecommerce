@@ -19,14 +19,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ServletController
  */
-@WebServlet("/InsertarViaje")
-public class InsertarViaje extends HttpServlet {
+@WebServlet("/InsertarDestino")
+public class InsertarDestino extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InsertarViaje() {
+    public InsertarDestino() {
         super();
     }
 
@@ -48,13 +48,13 @@ public class InsertarViaje extends HttpServlet {
 			
 			
 			//INSERTAR USUARIO
-			PreparedStatement ps = conn.prepareStatement("INSERT INTO usuarios(plazasdisponibles, destino, fecha, precio) VALUES (?, ?, ?, ?)");
+			PreparedStatement ps = conn.prepareStatement("INSERT INTO destinos(plazasdisponibles, destino, fecha, precio) VALUES (?, ?, ?, ?)");
 			ps.setString(1, plazasdisponibles);
 			ps.setString(2, destino);			
 			ps.setDate(3, fecha);
 			ps.setFloat(4, precio);
 			ps.executeUpdate();
-			response.sendRedirect("ReservaHecha.jsp");
+			response.sendRedirect("Destinos.jsp");
 			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
