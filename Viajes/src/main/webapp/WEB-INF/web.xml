@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Administrar</servlet-name>
+  	<display-name>Administrar</display-name>
+  	<description></description>
+  	<servlet-class>com.viajes.controller.Administrar</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InsertarViaje</servlet-name>
+  	<display-name>InsertarViaje</display-name>
+  	<description></description>
+  	<servlet-class>com.viajes.controller.InsertarViaje</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Administrar</servlet-name>
+  	<url-pattern>/Administrar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertarViaje</servlet-name>
+  	<url-pattern>/InsertarViaje</url-pattern>
+  </servlet-mapping>
+</web-app>
