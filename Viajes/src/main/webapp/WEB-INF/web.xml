@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>com.viajes.controller.InsertarViaje</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>BorrarDestino</servlet-name>
+  	<display-name>BorrarDestino</display-name>
+  	<description></description>
+  	<servlet-class>com.viajes.controller.BorrarDestino</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InsertarReserva</servlet-name>
+  	<display-name>InsertarReserva</display-name>
+  	<description></description>
+  	<servlet-class>com.viajes.controller.InsertarReserva</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Administrar</servlet-name>
   	<url-pattern>/Administrar</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>InsertarViaje</servlet-name>
   	<url-pattern>/InsertarViaje</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BorrarDestino</servlet-name>
+  	<url-pattern>/BorrarDestino</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertarReserva</servlet-name>
+  	<url-pattern>/InsertarReserva</url-pattern>
   </servlet-mapping>
 </web-app>
